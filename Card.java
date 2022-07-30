@@ -9,7 +9,7 @@ public class Card {
     public Card(int id){
 
         Numbers numbers = new Numbers();
-        this.cardNumbers = numbers.generateNumbers();
+        this.cardNumbers = numbers.getCardNumbers();
 
     }
 
