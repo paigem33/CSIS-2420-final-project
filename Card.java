@@ -15,16 +15,33 @@ public class Card {
 
     public String toString(){
 
-        // TODO: format card in the following when it is called
-        // B I N  G  O
-        // 1 6 11 16 21
-        // 2 7 12 17 22
-        // 3 8 FREE 18 23
-        // 4 9 14 19 24
-        // 5 10 15 20 25
+        List<Integer> list;
+        StringBuilder sb = new StringBuilder();
+        String[] strPrefix = {"B", "I", "N", "G", "O"};
 
-        return null;
+        for (int i = 0; i < cardNumbers.size(); i++) {
+            sb.append(String.format("    %s  ", strPrefix[i]));
+        }
+        sb.append("\n");
 
+        for (int i = 0; i < cardNumbers.size(); i++) {
+            list = cardNumbers.get(0);
+
+            for (int j = 0; j < cardNumbers.size(); j++) {
+                if(list.get(i) == 0){
+                    sb.append(String.format(" %s  ", "FREE"));
+                } else {
+                    sb.append(String.format("%5d  ", list.get(i)));
+                }
+                if(j + 1 != 5){
+                    list = cardNumbers.get(j + 1);
+                }
+            }
+
+            sb.append("\n");
+
+        }
+        return sb.toString();
     }
 
 }
