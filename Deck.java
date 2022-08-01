@@ -19,6 +19,12 @@ public class Deck {
 
     }
 
+    public int getSize() {
+
+        return cards.size();
+
+    }
+
     public String getCard(int id){
 
         Card card = cards.get(id);

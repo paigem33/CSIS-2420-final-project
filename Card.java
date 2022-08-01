@@ -22,7 +22,7 @@ public class Card {
         for (int i = 0; i < cardNumbers.size(); i++) {
             sb.append(String.format("    %s  ", strPrefix[i]));
         }
-        sb.append("\n");
+        sb.append("<br>");
 
         for (int i = 0; i < cardNumbers.size(); i++) {
             list = cardNumbers.get(0);
@@ -38,7 +38,7 @@ public class Card {
                 }
             }
 
-            sb.append("\n");
+            sb.append("<br>");
 
         }
         return sb.toString();
